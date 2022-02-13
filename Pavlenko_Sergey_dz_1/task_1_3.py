@@ -7,3 +7,4 @@ for num in range(1, 101):
         print(num, 'процента')
     else:
         print(num, 'процентов')
+        

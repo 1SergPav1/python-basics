@@ -19,3 +19,4 @@ else:
     minute = minute % 60
     hours = duration % 86400 // 3600
     print(days, 'дн', hours, 'час', minute, 'мин', seconds, 'сек')
+    

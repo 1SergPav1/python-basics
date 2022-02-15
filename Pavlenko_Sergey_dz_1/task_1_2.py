@@ -70,3 +70,4 @@ print('\n', new_cubes)
 for cube in new_cubes:
     sum_cubes += cube
 print('c) Сумма кубов из списка, сумма цифр которых делится нацело на 7 =', sum_cubes)
+

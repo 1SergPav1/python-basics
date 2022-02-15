@@ -11,46 +11,62 @@ print(cubes)
 
 # a
 
-sum_numbers_cubes = []
+new_cubes = []
+sum_cubes = 0
 
 for cube in cubes:
     sum_numbers = 0
-    while cube > 0:
-        sum_numbers += cube % 10
-        cube //= 10
+    temp_cube = cube
+    while temp_cube > 0:
+        sum_numbers += temp_cube % 10
+        temp_cube //= 10
     if sum_numbers % 7 == 0:
-        sum_numbers_cubes.append(sum_numbers)
-print(sum_numbers_cubes)
-
-# b
-
-new_cubes = []
-new_sum_numbers_cubes = []
-
-for cube in cubes:
-    cube += 17
-    new_cubes.append(cube)
+        new_cubes.append(cube)
 print('\n', new_cubes)
 
 for cube in new_cubes:
+    sum_cubes += cube
+print('а) Сумма кубов из списка, сумма цифр которых делится нацело на 7 =', sum_cubes)
+
+# b
+
+temp_cubes = []
+new_cubes = []
+sum_cubes = 0
+
+for cube in cubes:
+    temp_cube = cube + 17
+    temp_cubes.append(temp_cube)
+
+for cube in temp_cubes:
     sum_numbers = 0
-    while cube > 0:
-        sum_numbers += cube % 10
-        cube //= 10
+    temp_cube = cube
+    while temp_cube > 0:
+        sum_numbers += temp_cube % 10
+        temp_cube //= 10
     if sum_numbers % 7 == 0:
-        new_sum_numbers_cubes.append(sum_numbers)
-print(new_sum_numbers_cubes)
+        new_cubes.append(cube)
+print('\n', new_cubes)
+
+for cube in new_cubes:
+    sum_cubes += cube
+print('b) Сумма кубов из списка, сумма цифр которых делится нацело на 7 =', sum_cubes)
 
 # c
 
-sum_numbers_cubes = []
+new_cubes = []
+sum_cubes = 0
 
 for cube in cubes:
-    cube += 17
     sum_numbers = 0
-    while cube > 0:
-        sum_numbers += cube % 10
-        cube //= 10
+    temp_cube = cube + 17
+    while temp_cube > 0:
+        sum_numbers += temp_cube % 10
+        temp_cube //= 10
     if sum_numbers % 7 == 0:
-        sum_numbers_cubes.append(sum_numbers)
-print('\n', sum_numbers_cubes)
+        new_cubes.append(cube + 17)
+print('\n', new_cubes)
+
+for cube in new_cubes:
+    sum_cubes += cube
+print('c) Сумма кубов из списка, сумма цифр которых делится нацело на 7 =', sum_cubes)
